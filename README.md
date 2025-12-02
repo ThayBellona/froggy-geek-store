@@ -64,4 +64,4 @@ Este projeto foi desenvolvido para demonstrar domínio em desenvolvimento Full-S
 *(Espaço reservado para prints do Dashboard, Checkout e Perfil)*
 
 ---
-Desenvolvido com 💚 e Código por **Thay Bellona**.
+Desenvolvido com Anna Julia e Código por **Thay Bellona**.
