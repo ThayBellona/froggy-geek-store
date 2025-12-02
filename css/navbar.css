@@ -1,0 +1,99 @@
+/* --- NAVBAR DUPLA (Estilo Big Store) --- */
+
+/* 1. Barra Superior (Logo, Busca, Ícones) */
+.navbar-top {
+    background-color: #ffffff;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar-brand {
+    font-weight: 900;
+    letter-spacing: -1px;
+    font-size: 1.6rem;
+    color: var(--frog-dark) !important;
+    margin-right: 30px;
+}
+
+/* Barra de Pesquisa */
+.search-box {
+    width: 100%;
+    max-width: 500px; /* Tamanho máximo da barra */
+}
+
+.form-search {
+    border-radius: 50px;
+    border: 2px solid #eee;
+    padding-left: 20px;
+    transition: all 0.3s;
+}
+
+.form-search:focus {
+    border-color: var(--frog-main);
+    box-shadow: 0 0 0 4px rgba(67, 160, 71, 0.1);
+}
+
+.btn-search {
+    border-radius: 50px;
+    padding: 0 25px;
+    background-color: var(--frog-main);
+    color: white;
+    border: none;
+    font-weight: 600;
+    margin-left: -40px; /* Faz o botão entrar na barra */
+    z-index: 10;
+}
+.btn-search:hover { background-color: var(--frog-dark); color: white; }
+
+/* Ícones da Direita */
+.nav-icon-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #555;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+.nav-icon-item i {
+    font-size: 1.4rem;
+    margin-bottom: 2px;
+    color: var(--text-dark);
+}
+.nav-icon-item:hover { color: var(--frog-main); }
+.nav-icon-item:hover i { color: var(--frog-main); transform: translateY(-2px); }
+
+
+/* 2. Barra Inferior (Categorias) */
+.navbar-bottom {
+    background-color: #fff;
+    border-bottom: 3px solid var(--frog-main);
+    padding: 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.nav-link-bottom {
+    color: #444 !important;
+    font-weight: 600;
+    padding: 12px 20px !important;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+    border-bottom: 3px solid transparent;
+    transition: all 0.3s;
+}
+
+.nav-link-bottom:hover {
+    color: var(--frog-main) !important;
+    background-color: #f9f9f9;
+    border-bottom-color: var(--frog-main);
+}
+
+/* Badge Carrinho Ajustado */
+.badge-cart {
+    top: -5px;
+    right: -5px;
+    font-size: 0.6rem;
+}

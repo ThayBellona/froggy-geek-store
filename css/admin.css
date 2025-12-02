@@ -1,0 +1,127 @@
+/* --- 1. FONTES E VARIÁVEIS --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;900&display=swap');
+
+:root {
+    --frog-dark: #1b5e20;    /* Verde Escuro */
+    --frog-main: #43a047;    /* Verde Principal */
+    --frog-accent: #c1ff72;  /* Verde Neon */
+    --bg-light: #f8f9fa;     /* Fundo Geral */
+    --text-dark: #1f2937;    /* Preto Suave */
+}
+
+/* --- 2. GERAL --- */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-light);
+    color: var(--text-dark);
+    margin: 0; padding: 0;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    overflow-x: hidden;
+}
+
+a { text-decoration: none; color: inherit; transition: 0.3s; }
+ul { list-style: none; padding: 0; margin: 0; }
+
+/* --- 3. NAVBAR --- */
+.navbar-froggy {
+    background-color: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(10px);
+    padding: 12px 0;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.05);
+    border-bottom: 3px solid var(--frog-main);
+}
+.navbar-brand { font-weight: 900; letter-spacing: -1px; font-size: 1.5rem; color: var(--frog-dark) !important; display: flex; align-items: center; gap: 10px; }
+.nav-link { font-weight: 600; color: #444 !important; margin: 0 8px; transition: all 0.3s; }
+.nav-link:hover { color: var(--frog-main) !important; transform: translateY(-1px); }
+
+.dropdown-menu { border: none; border-top: 3px solid var(--frog-main); box-shadow: 0 10px 40px rgba(0,0,0,0.1); border-radius: 0 0 10px 10px; padding: 10px; }
+.dropdown-item { border-radius: 5px; padding: 8px 15px; font-weight: 500; color: #555; }
+.dropdown-item:hover { background-color: var(--bg-light); color: var(--frog-dark); padding-left: 20px; transition: 0.2s; }
+
+.btn-frog { background-color: var(--frog-main); color: white; font-weight: 700; border: none; padding: 8px 25px; border-radius: 50px; transition: 0.3s; }
+.btn-frog:hover { background-color: var(--frog-dark); color: white; transform: translateY(-2px); }
+.badge-cart { font-size: 0.65rem; border: 2px solid white; }
+
+/* --- 4. HERO SECTION --- */
+.hero-section { background: linear-gradient(135deg, #2e6417 0%, #66bb6a 100%); color: white; padding: 80px 0; border-radius: 0 0 60px 60px; margin-bottom: 60px; position: relative; overflow: hidden; box-shadow: 0 10px 30px rgba(46, 100, 23, 0.25); }
+.hero-title { font-size: clamp(2.5rem, 5vw, 4rem); font-weight: 900; line-height: 1.1; margin-bottom: 20px; }
+.hero-circle-bg { position: absolute; width: 450px; height: 450px; background: radial-gradient(circle, rgba(193, 255, 114, 0.4) 0%, rgba(255, 255, 255, 0) 70%); border-radius: 50%; z-index: 0; animation: pulse 3s infinite alternate; }
+@keyframes pulse { 0% { transform: scale(1); opacity: 0.5; } 100% { transform: scale(1.1); opacity: 0.8; } }
+.hero-img { position: relative; z-index: 1; max-height: 450px; width: auto; transform: rotate(-12deg) translateY(20px); filter: drop-shadow(0 25px 25px rgba(0,0,0,0.35)); transition: all 0.5s ease; }
+.hero-img:hover { transform: rotate(0deg) scale(1.05) translateY(0); }
+
+/* --- 5. CATEGORIAS --- */
+.cat-grid { display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-bottom: 60px; }
+.cat-item { text-align: center; cursor: pointer; }
+.cat-circle { width: 130px; height: 130px; background: white; border-radius: 50%; margin-bottom: 15px; box-shadow: 0 8px 20px rgba(0,0,0,0.08); border: 4px solid white; overflow: hidden; position: relative; transition: 0.4s; }
+.cat-circle img { width: 100%; height: 100%; object-fit: cover; object-position: top center; transition: 0.5s; }
+.cat-item:hover .cat-circle { border-color: var(--frog-main); transform: translateY(-10px); box-shadow: 0 15px 30px rgba(67, 160, 71, 0.3); }
+.cat-item:hover .cat-circle img { transform: scale(1.1); }
+.cat-item h5 { font-weight: 700; color: #555; transition: 0.3s; }
+.cat-item:hover h5 { color: var(--frog-main); }
+
+/* --- 6. CARDS PRODUTOS --- */
+.produto-card { background: white; border: 1px solid #e5e7eb; border-radius: 20px; overflow: hidden; transition: all 0.3s ease; height: 100%; display: flex; flex-direction: column; }
+.produto-card:hover { transform: translateY(-8px); box-shadow: 0 20px 40px rgba(46, 100, 23, 0.15); border-color: var(--frog-accent); }
+.card-img-wrapper { background-color: #f8f9fa; height: 280px; padding: 40px; display: flex; align-items: center; justify-content: center; border-bottom: 1px solid #f0f0f0; }
+.card-img-top { max-height: 100%; max-width: 100%; object-fit: contain; transition: 0.5s ease; filter: drop-shadow(0 10px 15px rgba(0,0,0,0.05)); }
+.produto-card:hover .card-img-top { transform: scale(1.15) rotate(-3deg); }
+.card-body { padding: 25px; flex-grow: 1; display: flex; flex-direction: column; background: white; }
+.card-title { font-size: 1.1rem; font-weight: 700; color: var(--text-dark); margin-bottom: 15px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.card-footer-custom { margin-top: auto; display: flex; justify-content: space-between; align-items: center; padding-top: 15px; border-top: 1px dashed #f0f0f0; }
+.card-price { font-size: 1.3rem; font-weight: 800; color: var(--frog-dark); }
+.btn-card-action { width: 42px; height: 42px; border-radius: 50%; background-color: white; border: 2px solid #f0f0f0; color: var(--frog-main); display: flex; align-items: center; justify-content: center; transition: 0.3s; }
+.produto-card:hover .btn-card-action { background-color: var(--frog-main); border-color: var(--frog-main); color: white; transform: scale(1.1); }
+
+/* --- 7. FOOTER --- */
+footer { background-color: #1a3d0d !important; margin-top: auto; padding: 30px 0; color: var(--frog-accent); }
+
+/* =========================================
+   --- 8. ÁREA DO ADMIN (DASHBOARD & HUB) --- 
+   ========================================= */
+
+/* Botões Redondos Grandes (Hub) */
+.hub-btn {
+    display: flex !important; /* Força para garantir que apareça */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    text-decoration: none !important;
+    color: white !important;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+    border: 5px solid rgba(255,255,255,0.4);
+    margin: 0 auto;
+}
+
+.hub-btn i { font-size: 3.5rem; margin-bottom: 10px; }
+.hub-btn span { font-size: 0.9rem; }
+
+.hub-btn:hover { 
+    transform: translateY(-10px) scale(1.05); 
+    box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+    border-color: white;
+}
+
+/* Cores Específicas */
+.bg-dash { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }   /* Roxo */
+.bg-prod { background: linear-gradient(135deg, #43a047 0%, #1b5e20 100%); }   /* Verde */
+.bg-sales { background: linear-gradient(135deg, #ff9800 0%, #f57c00 100%); }  /* Laranja */
+.bg-cupons { background: linear-gradient(135deg, #2193b0 0%, #6dd5ed 100%); } /* Azul */
+
+/* Cards de KPI (Dashboard) */
+.kpi-card {
+    background: white; border-radius: 20px; padding: 25px;
+    border: 1px solid #f0f0f0; box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    display: flex; align-items: center; justify-content: space-between;
+    height: 100%; transition: 0.3s;
+}
+.kpi-card:hover { transform: translateY(-5px); box-shadow: 0 15px 35px rgba(0,0,0,0.08); }
+.kpi-icon { width: 70px; height: 70px; border-radius: 18px; display: flex; align-items: center; justify-content: center; font-size: 2rem; background-color: var(--bg-light); }
