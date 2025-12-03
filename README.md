@@ -61,7 +61,12 @@ Este projeto foi desenvolvido para demonstrar domínio em desenvolvimento Full-S
 
 ## 📸 Screenshots
 
-*(Espaço reservado para prints do Dashboard, Checkout e Perfil)*
+<img width="1297" height="689" alt="image" src="https://github.com/user-attachments/assets/1742ab31-6e16-4d07-beef-66bf605ab7df" />
+<img width="1306" height="692" alt="image" src="https://github.com/user-attachments/assets/9c685c50-984b-4ad4-952b-d546f792d297" />
+<img width="1309" height="690" alt="image" src="https://github.com/user-attachments/assets/e0039aff-c525-4a30-8395-a7505fcb3af4" />
+<img width="1308" height="691" alt="image" src="https://github.com/user-attachments/assets/a14b22e3-a955-4312-90d5-7795b2f31d29" />
+<img width="1291" height="703" alt="image" src="https://github.com/user-attachments/assets/683a90a1-4b79-400f-8acf-b00bc81a1c15" />
+<img width="945" height="664" alt="image" src="https://github.com/user-attachments/assets/e9e4e76d-f458-409d-8173-5a40ba51c41e" />
 
 ---
 Desenvolvido com Anna Julia e Código por **Thay Bellona**.
